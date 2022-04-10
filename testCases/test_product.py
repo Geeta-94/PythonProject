@@ -52,3 +52,9 @@ class Test_001_Product:
         self.pd.clickAddToBasket()
         self.pd.clickViewBasket()
         self.pd.clickcheckout()
+        act_title = self.driver.title
+        self.driver.close()
+        if act_title == "Basket | Oscar - Sandbox":
+            assert True
+        else:
+            assert False
